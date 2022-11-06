@@ -22,7 +22,6 @@ export class ApiKeyGuard implements CanActivate {
       throw new UnauthorizedException('Token is Required in headers');
     }
 
-    //12MEMjflfg9lHbeb
     return true;
   }
 }
