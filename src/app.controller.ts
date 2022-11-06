@@ -1,5 +1,7 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Query, UseGuards } from '@nestjs/common';
+import { APP_GUARD } from '@nestjs/core';
 import { readFileSync } from 'fs';
+import { ApiKeyGuard } from './app.guard';
 import { AppService } from './app.service';
 
 export class Word {
@@ -18,7 +20,7 @@ export class Word {
   kmul: string;
   extraortho: string;
 }
-
+@UseGuards(ApiKeyGuard)
 @Controller()
 export class AppController {
   private words = JSON.parse(
