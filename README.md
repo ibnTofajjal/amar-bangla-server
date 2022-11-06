@@ -25,3 +25,13 @@ yarn start:dev
 ```
 http://localhost:8000/?query=কলম
 ```
+
+---
+
+#### Token is Required
+
+###### [Token]: (in-code)
+
+```
+https://amar-bangla.herokuapp.com/
+```
